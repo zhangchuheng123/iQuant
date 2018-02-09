@@ -26,12 +26,17 @@
 * 交易所规则：停复牌
 * 交易所规则：除息除权
 
-以下的内容还在写作中，如果有相关问题和建议可以留言我的知乎[张楚珩](https://www.zhihu.com/people/zhang-chu-heng/activities)或者在github[此项目](https://github.com/zhangchuheng123/iQuant/issues)下建立issue
-
-第二讲：量化投资是什么？
+[第二讲：量化投资是什么？](chapter_2.md)
 
 * 传统投资与量化投资
-* 基本量化投资模型（CAMP、APT）
+* 量化投资与有效市场假说
+* 再谈量化投资概念
+* 一种简单的量化模型：现代资产组合理论（MPT）
+* 进一步的量化模型：资本资产定价模型（CAPM）
+* 更强大的量化模型：单因子模型和多因子模型（Factor Model）
+* 再讲一个量化模型：套利与套利定价模型(APT）
+
+以下的内容还在写作中，如果有相关问题和建议可以留言我的知乎[张楚珩](https://www.zhihu.com/people/zhang-chu-heng/activities)或者在github[此项目](https://github.com/zhangchuheng123/iQuant/issues)下建立issue
 
 第三讲：如何开展量化投资研究？
 
