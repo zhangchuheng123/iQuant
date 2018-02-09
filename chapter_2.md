@@ -1,3 +1,7 @@
+---
+layout: post
+mathjax: true
+---
 
 ## 量化投资是什么？
 
