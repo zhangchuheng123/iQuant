@@ -137,7 +137,7 @@ $$ r_{i, t} = \alpha_i + \beta_i F_t + \epsilon_{i, t} $$
 
 $$ r_A = \alpha_A + \beta_A F + \epsilon_A = 5\% + 1.1 \times 8\% + 3\% = 16.8\% $$
 
-如果我们还知道GDP增速的波动率$\sigma^2_F = 1\% $，该股票噪声波动率$\sigma^2_\epsilon = 4\% $，则可以算出该股票的风险
+如果我们还知道GDP增速的波动率$\sigma^2\_F = 1\%$，该股票噪声波动率$\sigma^2\_\epsilon = 4\%$，则可以算出该股票的风险
 
 $$ \sigma^2_A = \beta_A^2 \times \sigma^2_F + \sigma^2_\epsilon = 1.21 \times 1\% + 4 \% = 5.21 \%$$
 
