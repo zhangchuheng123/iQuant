@@ -34,7 +34,7 @@
 * 一种简单的量化模型：现代资产组合理论（MPT）
 * 进一步的量化模型：资本资产定价模型（CAPM）
 * 更强大的量化模型：单因子模型和多因子模型（Factor Model）
-* 再讲一个量化模型：套利与套利定价模型(APT）
+* 再讲一个量化模型：套利与套利定价模型（APT）
 
 [第三讲：如何开展量化投资研究？](chapter_3.md)
 
@@ -44,14 +44,31 @@
 * 开始挣钱！——从回测到实盘
 
 以下的内容还在写作中，如果有相关问题和建议可以留言我的知乎[张楚珩](https://www.zhihu.com/people/zhang-chu-heng/activities)或者在github[此项目](https://github.com/zhangchuheng123/iQuant/issues)下建立issue
-
 [第四讲：机器学习如何与量化投资结合？](chapter_4.md)
 
+* 基本框架
 * 决策树模型
 * 支持向量机
 * 贝叶斯模型
 * 聚类模型
 
+[第五讲：从零开始认识强化学习](chapter_5.md)
 
+* 强化学习基本概念
+* 马可夫决策模型
+* 价值函数
+* Bellman算子
+* Value Iteration和Policy Iteration
+* 动态规划方法
+* 蒙特卡洛方法
+
+以下的内容还在写作中，如果有相关问题和建议可以留言我的知乎[张楚珩](https://www.zhihu.com/people/zhang-chu-heng/activities)或者在github[此项目](https://github.com/zhangchuheng123/iQuant/issues)下建立issue
+
+[第六讲：强化学习策略迭代类方法](chapter_5.md)
+
+* 初识时间差分方法 —— TD(0)
+* 从少量状态到数不清的状态 —— 函数逼近技术
+* 从TD(0)到MC的过渡 —— TD($\lambda$)
+* 用强化学习来玩游戏 —— DQN
 
 ## 欢迎访问主站[张楚珩的仓库](http://sealzhang.tk)
