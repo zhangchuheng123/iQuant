@@ -149,7 +149,7 @@ $$
 值迭代有如下性质：
 
 * 如果初始化的时候$V^{(0)}$的每一个元素都置0，那么有$V^{(0)} \le V^{(1)} \le \cdots$
-* $||V^{(n)} - V\_\*||\_\infty \le \gamma^n ||R||\_\infty / (1-\gamma)$
+* $\lVert V^{(n)} - V\_\*\rVert \_\infty \le \gamma^n \lVert R \rVert \_\infty / (1-\gamma)$
 * 在$T\to \infty$的时候，能够得到$V=V\_\*$
 
 $$
