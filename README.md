@@ -43,7 +43,6 @@
 * 怎样衡量量化策略的好坏？——一箩筐统计指标
 * 开始挣钱！——从回测到实盘
 
-以下的内容还在写作中，如果有相关问题和建议可以留言我的知乎[张楚珩](https://www.zhihu.com/people/zhang-chu-heng/activities)或者在github[此项目](https://github.com/zhangchuheng123/iQuant/issues)下建立issue
 [第四讲：机器学习如何与量化投资结合？](chapter_4.md)
 
 * 基本框架
