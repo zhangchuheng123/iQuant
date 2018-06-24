@@ -52,12 +52,12 @@ $$p(s', r | s, a) = Pr[S_{t+1} = s', R_{t+1} = r | S_t=s, A_t=a] = Pr[S_{t+1} = 
 
 我们注意到，马可夫性使得我们可以仅仅利用当前状态来估计接下来的收益，即仅仅使用当前状态来估计的策略并不比使用所有历史的策略差。可以说马可夫性带给我们了极大的计算上的便利，我们不用每一步都去处理所有的历史步骤，而是只需要面对当前的状态来进行处理。同时注意到，可能有些信息并没有被完整的包含到模型的状态信号$S_t$中，这使得模型并不满足马可夫性。不过我们一般还是认为它们是**近似地**满足马可夫性的，因此仅仅使用当前状态的信息来做出对于未来收益的预测和行动的选择并不是很差的策略。同时，如果选取不仅仅是当前时刻的状态状态，而是之前的多个时刻的状态叠加在一起作为当前状态，一般可以增强马可夫性。
 
-关于MDP更为形式化的定义是一个五元组$(\mathcal{S}, \mathcal{A}, P, R, \gamma)$，而提到的MDP动力学特征$p(s', r | s, a)$反映了这个MDP问题中的所有环境因素。
+关于MDP更为形式化的定义是一个五元组$(\mathcal{S}, \mathcal{A}, P, R, \gamma)$，而提到的MDP动力学特征$p(s', r \| s, a)$反映了这个MDP问题中的所有环境因素。
 
 * $\mathcal{S}$表示状态空间，在**有限状态的马可夫决策过程**（finite MDP）中，该集合元素格式是有限的；
 * $\mathcal{A}(S)$表示处于状态$S$下时，可能的行动空间，在有限状态的马可夫决策过程中，每一个集合元素个数都是有限的；
 * $P(s '\| s, a)$表示在状态$s$下，采取行动$a\in \mathcal{A}(s)$时跳转到状态$s'$的概率，有关系$P(s'\|s, a) = Pr[S_{t+1}=s' \| S_t = s, A_t = a] = \sum_{r\in\mathbb{R}} p(s', r \| s, a)$；
-* $R(s', s, a)$表示在状态$s$下，采取行动$a\in \mathcal{A}(s)$并跳转到状态$s'$时取得的即时奖励，有关系$R(s', s, a) = \mathbb{E}[R_{t+1} | S_t = s, A_t = a, S_{t+1}=s'] = \dfrac{\sum_{r\in\mathbb{R}} r p(s', r \|s, a)}{P(s' \|s, a)}$；类似地，我们还可以得到在状态$s$下，采取行动$a\in \mathcal{A}(s)$后的期望即时奖励，$R(s, a) = \mathbb{E}[R_{t+1} | S_t = s, A_t = a] = \sum_{r\in\mathbb{R}} r \sum_{s'\in\mathcal{S}} p(s', r \| s, a)$；
+* $R(s', s, a)$表示在状态$s$下，采取行动$a\in \mathcal{A}(s)$并跳转到状态$s'$时取得的即时奖励，有关系$R(s', s, a) = \mathbb{E}[R_{t+1} | S_t = s, A_t = a, S_{t+1}=s'] = \dfrac{\sum_{r\in\mathbb{R}} r p(s', r \|s, a)}{P(s' \|s, a)}$；类似地，我们还可以得到在状态$s$下，采取行动$a\in \mathcal{A}(s)$后的期望即时奖励，$R(s, a) = \mathbb{E}[R_{t+1} \| S_t = s, A_t = a] = \sum_{r\in\mathbb{R}} r \sum_{s'\in\mathcal{S}} p(s', r \| s, a)$；
 * $\gamma\in [0,1]$表示衰减率，它指征了该MDP的目标为$\max_\pi \mathbb{E}_{\pi, P, R}[\sum_{t=1}^T \gamma^t R_t]$，其中$R_{t+1} = R(S_{t+1}, S_t, A_t)$
 
 在下面的几个部分中，我们讨论的MDP都是有限状态的马可夫决策过程。
@@ -76,8 +76,8 @@ $$
 \begin{aligned}
 V_\pi(s) & = \mathbb{E}_\pi[\sum_{t=0}^\infty \gamma^t R_{t+1} | S_0 = s]\\
 &= \mathbb{E}_\pi[R_{t+1} + \gamma \sum_{k=0}^\infty \gamma^t R_{t+2} | S_1 = s] \\
-&= \sum_a \pi(a|s) \sum_{s'} \sum_r p(s', r|s, a) [r + \gamma \mathbb{E}_\pi[\sum_{t=0}^\infty \gamma^t R_{t+2} | S_{1} = s']] \\
-&= \sum_a \pi(a|s) \sum_{s', r} p(s', r|s, a) [r + \gamma V_\pi(s')] \\
+&= \sum_a \pi(a\|s) \sum_{s'} \sum_r p(s', r\|s, a) [r + \gamma \mathbb{E}_\pi[\sum_{t=0}^\infty \gamma^t R_{t+2} | S_{1} = s']] \\
+&= \sum_a \pi(a\|s) \sum_{s', r} p(s', r\|s, a) [r + \gamma V_\pi(s')] \\
 & \forall s \in \mathcal{S}
 \end{aligned}
 $$
@@ -85,7 +85,7 @@ $$
 这就是关于状态价值函数的Bellman方程，它描述的是当前状态的价值函数和它后续状态价值函数之间的递归关系。同理可以得到关于行动价值函数的Bellman方程。
 
 $$
-Q_\pi(s, a) = \sum_{s', r} p(s', r|s, a) [r + \gamma \sum_{a'} \pi(a'|s') Q_\pi(s', a')]
+Q_\pi(s, a) = \sum_{s', r} p(s', r\|s, a) [r + \gamma \sum_{a'} \pi(a'|s') Q_\pi(s', a')]
 $$
 
 那么对于一个有限状态的马可夫决策过程来说，是否存在一个最优的策略呢？如果一个策略$\pi'$在任何状态$s \in \mathcal{S}$下都有$V_{\pi'}(s) \le V_{\pi}(s)$，那么我们称策略$\pi'$优于$\pi$。对于所有的策略排序，我们总可以找到最优策略（有可能不止一个最优策略），我们记最优策略为$\pi_*$，最优策略具有如下性质
@@ -101,12 +101,12 @@ $$
 
 $$
 \begin{aligned}
-V_*(s) &= \max_{a\in\mathcal{A}(s)} \sum_{s', r} p(s', r|s, a)[r + \gamma V_*(s')] \\
-Q_*(s, a) &= \sum_{s', r} p(s', r|s, a) [r + \gamma \max_{a'} Q_*(s', a')]
+V_*(s) &= \max_{a\in\mathcal{A}(s)} \sum_{s', r} p(s', r\|s, a)[r + \gamma V_*(s')] \\
+Q_*(s, a) &= \sum_{s', r} p(s', r\|s, a) [r + \gamma \max_{a'} Q_*(s', a')]
 \end{aligned}
 $$
 
-显然地，状态价值函数和行动价值函数之间有关系$V_\pi(s) = \sum_{a} \pi(a|s) Q_\pi(s, a)$，$V_*(s) = \max_{a} Q_*(s, a)$。
+显然地，状态价值函数和行动价值函数之间有关系$V_\pi(s) = \sum_{a} \pi(a\|s) Q_\pi(s, a)$，$V_*(s) = \max_{a} Q_*(s, a)$。
 
 ### Bellman算子
 
@@ -127,7 +127,7 @@ $$
 对于确定性的策略来说里面的$\pi$就是$\pi(i)$；对于随机策略来说，还需要在外面对策略给出的行动求期望，这里将其省略。
 
 Bellman算子具有以下性质：
-* Bellman算子$\mathcal{T}$和$\mathcal{T}_\pi$在max norm下都是按系数（modulus）$\gamma$收缩的（contraction），即$|| \mathcal{T} V - \mathcal{T} U||_{\infty} \le \gamma || V - U||_{\infty}$
+* Bellman算子$\mathcal{T}$和$\mathcal{T}_\pi$在max norm下都是按系数（modulus）$\gamma$收缩的（contraction），即$\lVert \mathcal{T} V - \mathcal{T} U\rVert_{\infty} \le \gamma \lVert V - U\rVert_{\infty}$
 * Bellman算子$\mathcal{T}$具有唯一不动点$V_*$，即$\mathcal{T}V_* = V_*$；Bellman算子$\mathcal{T}_\pi$也具有唯一不动点$V_\pi$，即$\mathcal{T}_\pi V_\pi = V_\pi$，$V_*$和$V_\pi$的定义与前一节相同。前一个性质加上Banach fixed point theorem可以推导到此性质
 * Bellman算子$\mathcal{T}$和$\mathcal{T}_\pi$单调（monotonic），即$V\le \mathcal{T} V \Rightarrow V \le \mathcal{T} V \le \mathcal{T}^2 V \le \cdots \le V_*$，其中对于向量来说$\le$表示每一个元素都小于等于
 * 当$\mathcal{T}V = V$时，$V = V_*$；当$\mathcal{T}_\pi V = V$时，$V = V_\pi$；当$\mathcal{T}V = \mathcal{T}_\pi V = V$时，$\pi$是最优策略
