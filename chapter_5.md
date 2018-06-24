@@ -127,8 +127,8 @@ $$
 对于确定性的策略来说里面的$\pi$就是$\pi(i)$；对于随机策略来说，还需要在外面对策略给出的行动求期望，这里将其省略。
 
 Bellman算子具有以下性质：
-* Bellman算子$\mathcal{T}$和$\mathcal{T}\_\pi$在max norm下都是按系数（modulus）$\gamma$收缩的（contraction），即$\lVert \mathcal{T} V - \mathcal{T} U\rVert\_{\infty} \le \gamma \lVert V - U\rVert\_{\infty}$
-* Bellman算子$\mathcal{T}$具有唯一不动点$V\_*$，即$\mathcal{T}V\_* = V\_*$；Bellman算子$\mathcal{T}_\pi$也具有唯一不动点$V_\pi$，即$\mathcal{T}_\pi V_\pi = V_\pi$，$V_*$和$V_\pi$的定义与前一节相同。前一个性质加上Banach fixed point theorem可以推导到此性质
+* Bellman算子$\mathcal{T}$和$\mathcal{T}_\pi$在max norm下都是按系数（modulus）$\gamma$收缩的（contraction），即$\lVert \mathcal{T} V - \mathcal{T} U\rVert_{\infty} \le \gamma \lVert V - U\rVert_{\infty}$
+* Bellman算子$\mathcal{T}$具有唯一不动点$V_*$，即$\mathcal{T}V_* = V_*$；Bellman算子$\mathcal{T}_\pi$也具有唯一不动点$V_\pi$，即$\mathcal{T}_\pi V_\pi = V_\pi$，$V_*$和$V_\pi$的定义与前一节相同。前一个性质加上Banach fixed point theorem可以推导到此性质
 * Bellman算子$\mathcal{T}$和$\mathcal{T}_\pi$单调（monotonic），即$V\le \mathcal{T} V \Rightarrow V \le \mathcal{T} V \le \mathcal{T}^2 V \le \cdots \le V_*$，其中对于向量来说$\le$表示每一个元素都小于等于
 * 当$\mathcal{T}V = V$时，$V = V_*$；当$\mathcal{T}_\pi V = V$时，$V = V_\pi$；当$\mathcal{T}V = \mathcal{T}_\pi V = V$时，$\pi$是最优策略
 * 对任意的$V\in \mathbb{R}^n$，$\lim_{k\to \infty} \mathcal{T}^k V = V_*$
