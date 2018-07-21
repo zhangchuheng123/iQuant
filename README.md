@@ -61,13 +61,13 @@
 * 动态规划方法
 * 蒙特卡洛方法
 
-以下的内容还在写作中，如果有相关问题和建议可以留言我的知乎[张楚珩](https://www.zhihu.com/people/zhang-chu-heng/activities)或者在github[此项目](https://github.com/zhangchuheng123/iQuant/issues)下建立issue
-
-[第六讲：强化学习策略迭代类方法](chapter_5.md)
+[第六讲：强化学习策略迭代类方法](chapter_6.md)
 
 * 初识时间差分方法 —— TD(0)
 * 从少量状态到数不清的状态 —— 函数逼近技术
 * 从TD(0)到MC的过渡 —— TD($\lambda$)
 * 用强化学习来玩游戏 —— DQN
+
+以下的内容还在写作中，如果有相关问题和建议可以留言我的知乎[张楚珩](https://www.zhihu.com/people/zhang-chu-heng/activities)或者在github[此项目](https://github.com/zhangchuheng123/iQuant/issues)下建立issue
 
 ## 欢迎访问主站[张楚珩的仓库](http://sealzhang.tk)
