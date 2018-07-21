@@ -68,6 +68,25 @@
 * 从TD(0)到MC的过渡 —— TD($\lambda$)
 * 用强化学习来玩游戏 —— DQN
 
-以下的内容还在写作中，如果有相关问题和建议可以留言我的知乎[张楚珩](https://www.zhihu.com/people/zhang-chu-heng/activities)或者在github[此项目](https://github.com/zhangchuheng123/iQuant/issues)下建立issue
+以下的内容还在写作中，如果有相关问题和建议可以留言我的知乎[张楚珩](https://www.zhihu.com/people/zhang-chu-heng/activities)或者在github[此项目](https://github.com/zhangchuheng123/iQuant/issues)下建立issue。感觉写起来真的很麻烦，有点写不动了。先把坑挖好，然后再慢慢填。强化学习专题讲完之后就不这样一讲一讲地写了，会考虑一两篇论文读下来下一篇小的总结。接下来这个教程还是回归量化投资，讲一讲不同标的上的量化投资方法，比如股票、期货、数字货币等。
+
+[第七讲：强化学习策略梯度类方法](chapter_7.md)
+* REINFORCE
+* DPG
+* DDPG
+* NAF
+* Actor-Critic
+
+[第八讲：强化学习无导数优化方法](chapter_8.md)
+* NES
+* CMA
+* TRPO
+* PPO
+
+[第九讲：基于模型的强化学习方法](chapter_9.md)
+* PILCO
+
+[第十讲：数字货币量化交易概览](chapter_10.md)
+
 
 ## 欢迎访问主站[张楚珩的仓库](http://sealzhang.tk)
