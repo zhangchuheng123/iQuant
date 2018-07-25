@@ -74,17 +74,16 @@
 * REINFORCE
 * DPG
 * DDPG
-* NAF
 * Actor-Critic
 
-[第八讲：强化学习无导数优化方法](chapter_8.md)
-* NES
-* CMA
+[第八讲：强化学习高级策略梯度类方法和无导数优化方法](chapter_8.md)
+
 * TRPO
 * PPO
 
 [第九讲：基于模型的强化学习方法](chapter_9.md)
 * PILCO
+* NAF
 
 [第十讲：数字货币量化交易概览](chapter_10.md)
 
