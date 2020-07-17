@@ -1,5 +1,12 @@
+# Notice
+
+This series of tuturial is moved and integrated into two of my Zhihu columns: [人工智能与量化投资 https://zhuanlan.zhihu.com/intro-to-quant](https://zhuanlan.zhihu.com/intro-to-quant) and [强化学习前沿 https://zhuanlan.zhihu.com/reinforcementlearning](https://zhuanlan.zhihu.com/reinforcementlearning).
+You can find more about quant in the first column - from the basics to the advances, and more about advances of AI in the second column.
+Hope you enjoy!
 
 # 量化投资入门简介
+
+Zhihu: [https://zhuanlan.zhihu.com/p/55991656](https://zhuanlan.zhihu.com/p/55991656)
 
 ## 写在前面
 
@@ -19,6 +26,8 @@
 
 [第一讲：投资与股票交易规则](chapter_1.md)
 
+Zhihu: [https://zhuanlan.zhihu.com/p/55992159](https://zhuanlan.zhihu.com/p/55992159)
+
 * 一级市场与二级市场
 * 股票是如何交易的？
 * 如何看懂行情软件显示的数据？
@@ -27,6 +36,8 @@
 * 交易所规则：除息除权
 
 [第二讲：量化投资是什么？](chapter_2.md)
+
+Zhihu: [https://zhuanlan.zhihu.com/p/55993709](https://zhuanlan.zhihu.com/p/55993709)
 
 * 传统投资与量化投资
 * 量化投资与有效市场假说
@@ -38,12 +49,16 @@
 
 [第三讲：如何开展量化投资研究？](chapter_3.md)
 
+Zhihu: [https://zhuanlan.zhihu.com/p/56009964](https://zhuanlan.zhihu.com/p/56009964)
+
 * 怎样搞到数据？——巧妇难为无米之炊
 * 怎样测量策略的性能？——搭建回测系统
 * 怎样衡量量化策略的好坏？——一箩筐统计指标
 * 开始挣钱！——从回测到实盘
 
 [第四讲：机器学习如何与量化投资结合？](chapter_4.md)
+
+Zhihu: [https://zhuanlan.zhihu.com/p/56012917](https://zhuanlan.zhihu.com/p/56012917)
 
 * 基本框架
 * 决策树模型
@@ -52,6 +67,8 @@
 * 聚类模型
 
 [第五讲：从零开始认识强化学习](chapter_5.md)
+
+Zhihu: [https://zhuanlan.zhihu.com/p/56045177](https://zhuanlan.zhihu.com/p/56045177)
 
 * 强化学习基本概念
 * 马可夫决策模型
@@ -63,12 +80,16 @@
 
 [第六讲：强化学习策略迭代类方法](chapter_6.md)
 
+Zhihu: [https://zhuanlan.zhihu.com/p/56058343](https://zhuanlan.zhihu.com/p/56058343)
+
 * 初识时间差分方法 —— TD(0)
 * 从少量状态到数不清的状态 —— 函数逼近技术
 * 从TD(0)到MC的过渡 —— TD($\lambda$)
 * 用强化学习来玩游戏 —— DQN
 
 [第七讲：强化学习策略梯度类方法](chapter_7.md)
+
+Zhihu: [https://zhuanlan.zhihu.com/p/56128287](https://zhuanlan.zhihu.com/p/56128287)
 
 * 让策略梯度形式简单 —— Policy Gradient Theorem
 * 用最简单的采样方法来实现 —— REINFORCE
@@ -78,15 +99,18 @@
 
 以下的内容还在写作中，如果有相关问题和建议可以留言我的知乎[张楚珩](https://www.zhihu.com/people/zhang-chu-heng/activities)或者在github[此项目](https://github.com/zhangchuheng123/iQuant/issues)下建立issue。感觉写起来真的很麻烦，有点写不动了。先把坑挖好，然后再慢慢填。强化学习专题讲完之后就不这样一讲一讲地写了，会考虑一两篇论文读下来下一篇小的总结。接下来这个教程还是回归量化投资，讲一讲不同标的上的量化投资方法，比如股票、期货、数字货币等。
 
+Update: 下面强化学习算法更新到强化学习前沿中专栏中了。
+
 [第八讲：强化学习高级策略梯度类方法和无导数优化方法](chapter_8.md)
 
-* TRPO
-* PPO
+* TRPO Zhihu: [https://zhuanlan.zhihu.com/p/44595815](https://zhuanlan.zhihu.com/p/44595815)
+* PPO Zhihu: [https://zhuanlan.zhihu.com/p/44600797](https://zhuanlan.zhihu.com/p/44600797)
 
 [第九讲：基于模型的强化学习方法](chapter_9.md)
 
-* PILCO
-* NAF
+* PETS Zhihu: [https://zhuanlan.zhihu.com/p/45418829](https://zhuanlan.zhihu.com/p/45418829)
+* iLQG Zhihu: [https://zhuanlan.zhihu.com/p/45618611](https://zhuanlan.zhihu.com/p/45618611)
+* GPS Zhihu: [https://zhuanlan.zhihu.com/p/45754995](https://zhuanlan.zhihu.com/p/45754995)
 
 [第十讲：数字货币量化交易概览](chapter_10.md)
 
